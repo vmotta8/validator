@@ -13,12 +13,12 @@ describe('email validation', () => {
     expect(emailValidator(email)).toEqual('myname@email.com')
   })
 
-  it('should not accept null strings', () => {
+  it('should not accept null', () => {
     const email = null
     expect(emailValidator(email)).toEqual({ error })
   })
 
-  it('should not accept undefined strings', () => {
+  it('should not accept undefined', () => {
     const email = undefined
     expect(emailValidator(email)).toEqual({ error })
   })
@@ -43,6 +43,11 @@ describe('email validation', () => {
     expect(emailValidator(email)).toEqual({ error })
   })
 
+  it('should not accept domain with a part larger than 63 chars', () => {
+    const email = 'myname@' + 'd'.repeat(64) + '.com'
+    expect(emailValidator(email)).toEqual({ error })
+  })
+
   it('should not accept empty local part', () => {
     const email = '@email.com'
     expect(emailValidator(email)).toEqual({ error })
@@ -53,12 +58,12 @@ describe('email validation', () => {
     expect(emailValidator(email)).toEqual({ error })
   })
 
-  it('should not accept domain with a part larger than 63 chars', () => {
-    const email = 'myname@' + 'd'.repeat(64) + '.com'
+  it('should not accept domain with invalid char', () => {
+    const email = 'myname@e mail.com'
     expect(emailValidator(email)).toEqual({ error })
   })
 
-  it('should not accept empty local part with invalid char', () => {
+  it('should not accept local part with invalid char', () => {
     const email = 'my name@email.com'
     expect(emailValidator(email)).toEqual({ error })
   })
