@@ -1,4 +1,4 @@
-const { emailValidator } = require('./validators/emailValidator')
+const { emailValidator } = require('./src/validators/emailValidator')
 
 module.exports = class Validator {
   validateEmail (email) {

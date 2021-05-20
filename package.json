@@ -1,5 +1,7 @@
 {
-  "name": "vmotta8-validator",
+  "name": "@vmotta8/validator",
+  "author": "Vinicius da Motta",
+  "description": "Simple Validator",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -17,5 +19,19 @@
     "eslint-plugin-promise": "^4.3.1",
     "git-commit-msg-linter": "^3.0.0",
     "jest": "^26.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vmotta8/validator.git"
+  },
+  "keywords": [
+    "validator"
+  ],
+  "bugs": {
+    "url": "https://github.com/vmotta8/validator/issues"
+  },
+  "homepage": "https://github.com/vmotta8/validator#readme",
+  "publishConfig": {
+    "access": "public"
   }
 }
