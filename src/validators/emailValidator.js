@@ -36,5 +36,5 @@ exports.emailValidator = (email) => {
     throw new createError.BadRequest('Invalid email domain.')
   }
 
-  return email
+  return email.toLowerCase()
 }

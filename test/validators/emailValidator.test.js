@@ -11,6 +11,11 @@ describe('email validation', () => {
     expect(emailValidator(email)).toEqual('myname@email.com')
   })
 
+  it('should accept valid email 3', () => {
+    const email = 'MYNAME@email.com'
+    expect(emailValidator(email)).toEqual('myname@email.com')
+  })
+
   it('should not accept null', () => {
     try {
       const email = null

@@ -2,7 +2,7 @@
   "name": "@vmotta8/validator",
   "author": "Vinicius da Motta",
   "description": "Simple Validator",
-  "version": "1.0.1",
+  "version": "1.10.0",
   "main": "index.js",
   "scripts": {
     "test": "jest --passWithNoTests --silent --noStackTrace --runInBand",
