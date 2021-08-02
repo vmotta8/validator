@@ -1,4 +1,5 @@
 # Validator
+## (deprecated)
 Simple validator that I created to use in microservices
 
 ### How to use
